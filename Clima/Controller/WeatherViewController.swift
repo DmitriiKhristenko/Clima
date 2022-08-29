@@ -28,6 +28,7 @@ class WeatherViewController: UIViewController {
         
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation() // one-time delivery request
+        
     }
     
 }
@@ -69,7 +70,7 @@ extension WeatherViewController: WeatherManagerDelegate {
     func didUpdateWeater(_ WeatherManager: WeatherManager, weather: WeatherModel) {
         DispatchQueue.main.async {
             self.temperatureLabel.text = weather.temperatureString
-            self.cityLabel.text = weather.currentCity
+            self.cityLabel.text = weather.cityName
             self.conditionImageView.image = UIImage(systemName: weather.conditionName)
         }
     }
@@ -94,14 +95,9 @@ extension WeatherViewController: CLLocationManagerDelegate {
         }
     }
     
-    func updateCityLabel() {
-        
-    }
-    
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error)
     }
     
 }
-
 

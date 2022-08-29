@@ -17,17 +17,18 @@ protocol WeatherManagerDelegate {
 }
 
 struct WeatherManager {
-    let weatherURL = ****
+    let apiKey = ApiKey()
     
     var delegate: WeatherManagerDelegate?
     
     func fetchWeather(cityName: String) {
-        let urlString = "\(weatherURL)&q=\(cityName)"
+        let urlString = "\(apiKey.weatherURL)&q=\(cityName)"
         performRequest(with: urlString)
+        print(urlString)
     }
     
     func fetchWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
-        let urlString = "\(weatherURL)&lat=\(latitude)&lon=\(longitude)"
+        let urlString = "\(apiKey.weatherURL)&lat=\(latitude)&lon=\(longitude)"
         performRequest(with: urlString)
     }
     
@@ -63,9 +64,7 @@ struct WeatherManager {
             let id = decodedData.weather[0].id
             let temp = decodedData.main.temp
             let name = decodedData.name
-            let weather = WeatherModel(conditionId: id, cityName: name, currentCity: name, temperature: temp)
-            //            print(weather.conditionName)
-            //            print(weather.temperatureString)
+            let weather = WeatherModel(conditionId: id, cityName: name, temperature: temp)
             return weather
             
         } catch {

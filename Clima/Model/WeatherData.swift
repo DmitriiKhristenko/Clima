@@ -33,4 +33,3 @@ struct Wind: Codable {
 struct Sys: Codable {
     let country: String
 }
-

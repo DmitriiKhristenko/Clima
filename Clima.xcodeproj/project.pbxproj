@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,12 +13,12 @@
 		ADAA27B8231BBFAF00365194 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADAA27B6231BBFAF00365194 /* Main.storyboard */; };
 		ADAA27BA231BBFB300365194 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADAA27B9231BBFB300365194 /* Assets.xcassets */; };
 		ADAA27BD231BBFB300365194 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADAA27BB231BBFB300365194 /* LaunchScreen.storyboard */; };
-		ADAA27CE231BC87F00365194 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = ADAA27CD231BC87F00365194 /* README.md */; };
 		B5C8507D28BD64E8005044BF /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B5C8507C28BD64E8005044BF /* .gitignore */; };
 		B5C8507F28BD6CA7005044BF /* ApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C8507E28BD6CA7005044BF /* ApiKey.swift */; };
 		B5C9803528B624F0002946E0 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C9803428B624F0002946E0 /* WeatherManager.swift */; };
 		B5C9803728B7B713002946E0 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C9803628B7B713002946E0 /* WeatherData.swift */; };
 		B5C9803928B813D2002946E0 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C9803828B813D2002946E0 /* WeatherModel.swift */; };
+		B5DCE1102955BE640025F0C8 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DCE10F2955BE640025F0C8 /* Logger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,12 +30,12 @@
 		ADAA27B9231BBFB300365194 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADAA27BC231BBFB300365194 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADAA27BE231BBFB300365194 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ADAA27CD231BC87F00365194 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B5C8507C28BD64E8005044BF /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		B5C8507E28BD6CA7005044BF /* ApiKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiKey.swift; sourceTree = "<group>"; };
 		B5C9803428B624F0002946E0 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		B5C9803628B7B713002946E0 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		B5C9803828B813D2002946E0 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		B5DCE10F2955BE640025F0C8 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +53,6 @@
 			isa = PBXGroup;
 			children = (
 				B5C8507C28BD64E8005044BF /* .gitignore */,
-				ADAA27CD231BC87F00365194 /* README.md */,
 				ADAA27AF231BBFAF00365194 /* Clima */,
 				ADAA27AE231BBFAF00365194 /* Products */,
 			);
@@ -72,6 +71,7 @@
 			children = (
 				ADAA27B0231BBFAF00365194 /* AppDelegate.swift */,
 				ADAA27B2231BBFAF00365194 /* SceneDelegate.swift */,
+				B5DCE10F2955BE640025F0C8 /* Logger.swift */,
 				B5C9803328B624D2002946E0 /* Model */,
 				ADAA27C9231BC3F200365194 /* View */,
 				ADAA27C8231BC3E500365194 /* Controller */,
@@ -119,6 +119,7 @@
 				ADAA27A9231BBFAF00365194 /* Sources */,
 				ADAA27AA231BBFAF00365194 /* Frameworks */,
 				ADAA27AB231BBFAF00365194 /* Resources */,
+				B5DCE10E2955B3D10025F0C8 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -168,7 +169,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5C8507D28BD64E8005044BF /* .gitignore in Resources */,
-				ADAA27CE231BC87F00365194 /* README.md in Resources */,
 				ADAA27BD231BBFB300365194 /* LaunchScreen.storyboard in Resources */,
 				ADAA27BA231BBFB300365194 /* Assets.xcassets in Resources */,
 				ADAA27B8231BBFAF00365194 /* Main.storyboard in Resources */,
@@ -176,6 +176,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B5DCE10E2955B3D10025F0C8 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ADAA27A9231BBFAF00365194 /* Sources */ = {
@@ -189,6 +211,7 @@
 				B5C8507F28BD6CA7005044BF /* ApiKey.swift in Sources */,
 				B5C9803928B813D2002946E0 /* WeatherModel.swift in Sources */,
 				ADAA27B3231BBFAF00365194 /* SceneDelegate.swift in Sources */,
+				B5DCE1102955BE640025F0C8 /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

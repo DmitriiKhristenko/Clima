@@ -3,7 +3,6 @@
 //  Clima
 //
 //  Created by Дмитрий Х on 25.08.22.
-//  Copyright © 2022 App Brewery. All rights reserved.
 //
 
 import Foundation
@@ -11,13 +10,10 @@ import Foundation
 struct WeatherModel {
     let conditionId: Int
     let cityName: String
-    //let currentCity: String
     let temperature: Double
-    
     var temperatureString: String {
         return String(format: "%.1f", temperature)
     }
-    
     var conditionName: String {
         switch conditionId {
         case 200...232:
@@ -38,7 +34,4 @@ struct WeatherModel {
             return "cloud"
         }
     }
-    
 }
-
-
